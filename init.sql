@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS labels     CASCADE;
 
 CREATE TABLE users (
   id        varchar   PRIMARY KEY NOT NULL,
-  username  varchar   NOT NULL,
+  username  varchar   UNIQUE NOT NULL,
   password  varchar   NOT NULL
 );
 

@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: korrast-dev
       POSTGRES_PASSWORD: 123456
-      POSTGRES_DB: korrast-db
+      POSTGRES_DB: korrast_db
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
