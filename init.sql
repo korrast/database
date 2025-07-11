@@ -62,7 +62,7 @@ CREATE TABLE users_tables (
 
   CONSTRAINT pk_users_tables PRIMARY KEY(userID, tableID),
   FOREIGN KEY (userID)  REFERENCES users(id),
-  FOREIGN KEY (tableID) REFERENCES tasks(id)
+  FOREIGN KEY (tableID) REFERENCES tables(id)
 );
 
 CREATE TABLE tables_columns (
