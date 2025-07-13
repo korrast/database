@@ -55,6 +55,7 @@ DROP TABLE IF EXISTS tables_columns;
 DROP TABLE IF EXISTS columns_tasks;
 DROP TABLE IF EXISTS tables_labels;
 DROP TABLE IF EXISTS tasks_labels;
+DROP TABLE IF EXISTS tables_milestones;
 
 CREATE TABLE users_tables (
   userID    varchar,
@@ -99,4 +100,13 @@ CREATE TABLE tasks_labels (
   CONSTRAINT pk_tasks_labels PRIMARY KEY(taskID, labelID),
   FOREIGN KEY (taskID) REFERENCES tasks(id),
   FOREIGN KEY (labelID) REFERENCES labels(id)
+);
+
+create TABLE tables_milestones (
+  tableID     varchar,
+  milestoneID varchar,
+
+  CONSTRAINT pk_tables_milestones PRIMARY KEY(tableID, milestoneID),
+  FOREIGN KEY (tableID) REFERENCES tables(id),
+  FOREIGN KEY (milestoneID) REFERENCES milestones(id)
 );
